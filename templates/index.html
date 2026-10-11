@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chronicle — Documentary Voice Studio (Charon)</title>
+  <meta name="description" content="Chronicle Documentary Voice Studio — Give History a Voice with Charon: Cinematic narration, mystery atmosphere, and natural dramatic pauses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪶</text></svg>">
+</head>
+<body class="chronicle-body">
+  <!-- Panoramic Ancient Ruins Cinematic Background -->
+  <div class="scenic-background" style="background-image: url('/static/images/ancient_ruins_bg.jpg');"></div>
+  <div class="scenic-overlay"></div>
+
+  <div class="studio-wrapper">
+    <!-- Top Navigation Header -->
+    <header class="studio-header">
+      <!-- Left: Logo & Brand -->
+      <div class="brand-block">
+        <div class="quill-logo-badge">
+          <svg class="quill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m20 2-8.5 8.5"/>
+            <path d="M12.5 13.5A3.5 3.5 0 0 0 7 19l-4 3 3-4a3.5 3.5 0 0 0 5.5-5.5Z"/>
+            <path d="m14 6 4 4"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <h1 class="brand-title">CHRONICLE</h1>
+          <span class="brand-subtitle">DOCUMENTARY VOICE STUDIO</span>
+        </div>
+      </div>
+
+      <!-- Center: Headline -->
+      <div class="headline-block">
+        <h2 class="hero-headline">Give History a Voice.</h2>
+        <p class="hero-subheadline">Cinematic narration. One iconic voice — Charon.</p>
+      </div>
+
+      <!-- Right: Action Pills -->
+      <div class="header-actions">
+        <div class="nav-pill nav-status" id="navStatusPill">
+          <span class="status-soundwave">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="status-label" id="statusLabel">Ready</span>
+          <span class="status-dot"></span>
+        </div>
+
+        <button type="button" class="nav-btn nav-btn-outline" id="btnOpenPanduan">
+          <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+            <path d="M6 6h10"/>
+            <path d="M6 10h10"/>
+          </svg>
+          <span>Panduan</span>
+        </button>
+
+        <button type="button" class="nav-btn nav-btn-icon" id="btnOpenSettings" title="Pengaturan Audio & Engine">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Studio Grid -->
+    <main class="studio-grid">
+      
+      <!-- Left Column: Naskah Narasi & Generate Button -->
+      <section class="script-column" aria-label="Editor Naskah Narasi">
+        <!-- Naskah Card -->
+        <div class="studio-card script-card">
+          <div class="card-top-row">
+            <div class="card-heading-group">
+              <div class="icon-badge icon-badge-gold">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <line x1="10" y1="9" x2="8" y2="9"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="card-main-title">Naskah Narasi</h3>
+                <p class="card-sub-title">Pisahkan dengan <strong>Enter</strong> (1x Enter = 1 suara terpisah: voice 1, voice 2, ... maks 30 suara).</p>
+              </div>
+            </div>
+
+            <button type="button" class="btn-sample-script" id="btnContohNaskah">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+              </svg>
+              <span>Contoh Naskah</span>
+            </button>
+          </div>
+
+          <!-- Textarea -->
+          <div class="textarea-container">
+            <textarea 
+              id="inputText" 
+              class="script-textarea" 
+              placeholder="Tulis atau tempel naskah narasi di sini...&#10;&#10;💡 Pisahkan dengan Enter (1x Enter = 1 suara terpisah, maks 30 suara):&#10;Baris 1 -> voice 1&#10;Baris 2 -> voice 2&#10;Baris 3 -> voice 3..."
+              rows="6"
+            ></textarea>
+          </div>
+
+          <!-- Format Selector: WAV vs MP3 -->
+          <div class="format-choice-bar">
+            <span class="format-choice-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="fmt-icon-svg">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              </svg>
+              Format Audio:
+            </span>
+            <div class="format-pills-wrap" role="radiogroup" aria-label="Format Audio">
+              <button type="button" class="format-pill-btn active" data-format="wav" role="radio" aria-checked="true" title="Format WAV Studio 24kHz Mono 16-bit PCM (Sama Persis Acuan Charon)">
+                <span class="fmt-dot"></span>
+                <span class="fmt-name">WAV</span>
+                <span class="fmt-badge">Studio 24kHz</span>
+              </button>
+              <button type="button" class="format-pill-btn" data-format="mp3" role="radio" aria-checked="false" title="Format MP3 192kbps (Universal Kompatibel)">
+                <span class="fmt-dot"></span>
+                <span class="fmt-name">MP3</span>
+                <span class="fmt-badge">Universal 192k</span>
+              </button>
+            </div>
+            <input type="hidden" id="audioFormatInput" value="wav">
+          </div>
+
+          <!-- Warning Banner: Lebih dari 30 Baris -->
+          <div id="bulkLimitWarning" class="bulk-limit-banner hidden">
+            <div class="banner-icon">⚠️</div>
+            <div class="banner-body">
+              <strong class="banner-title">Batas Maksimal Terlampaui!</strong>
+              <p id="bulkLimitWarningMsg">Naskah terdeteksi 35 baris. Maksimal 30 suara sekali generate (1x Enter = 1 suara terpisah). Harap kurangi baris naskah untuk melanjutkan.</p>
+            </div>
+          </div>
+
+          <!-- Card Bottom Meta Row -->
+          <div class="card-bottom-row">
+            <div class="script-stats">
+              <div id="voiceCounterPill" class="voice-counter-pill" title="Jumlah suara terdeteksi berdasarkan 1x Enter">
+                <span class="vc-dot"></span>
+                <span id="voiceCounterText">0 / 30 suara</span>
+              </div>
+              <span class="stat-divider">|</span>
+              <span id="wordCount">0 kata</span>
+              <span class="stat-divider">|</span>
+              <span id="estDuration">~0 detik</span>
+            </div>
+
+            <button type="button" class="btn-tips-link" id="btnTipsJeda">
+              <span class="tips-bulb-icon">💡</span>
+              <span>Tips Jeda Dramatis</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Big Radiant Primary Action Button -->
+        <button type="button" class="btn-generate-narration" id="btnGenerate">
+          <span class="btn-generate-content">
+            <span class="generate-wave-icon">
+              <span></span><span></span><span></span><span></span><span></span>
+            </span>
+            <span class="btn-label-text" id="generateBtnText">Generate Narration</span>
+            <svg class="btn-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </button>
+      </section>
+
+      <!-- Right Column: Charon Profile & Controls Card -->
+      <section class="charon-column" aria-label="Profil Karakter Charon">
+        <div class="studio-card charon-profile-card">
+          
+          <!-- Top Row: Avatar, Name, Badge, & Scenic Vignette Art -->
+          <div class="charon-header-row">
+            <div class="charon-identity">
+              <div class="charon-avatar-frame">
+                <img src="/static/images/charon_avatar.jpg" alt="Charon Avatar" class="charon-avatar-img">
+              </div>
+              <div class="charon-name-block">
+                <h3 class="charon-hero-name">Charon</h3>
+                <span class="crown-badge">
+                  <span class="crown-icon">👑</span> NARATOR UTAMA
+                </span>
+              </div>
+            </div>
+
+            <!-- Scenic Vignette Hooded Art Illustration -->
+            <div class="charon-scenic-vignette">
+              <img src="/static/images/charon_card_art.jpg" alt="Charon Illustration" class="vignette-art-img">
+              <div class="vignette-glow-ring"></div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <p class="charon-description-text">
+            Suara narator pria sinematik dengan kedalaman, misteri, dan wibawa sejarah.
+          </p>
+
+          <!-- 4 Feature Badges (2x2 Grid) -->
+          <div class="charon-badges-grid">
+            <div class="charon-feature-pill">
+              <span class="pill-icon">🎬</span>
+              <span class="pill-title">Sangat Sinematik</span>
+            </div>
+            <div class="charon-feature-pill">
+              <span class="pill-icon">🕯️</span>
+              <span class="pill-title">Cerita Misteri</span>
+            </div>
+            <div class="charon-feature-pill">
+              <span class="pill-icon">⏱️</span>
+              <span class="pill-title">Tempo Normal</span>
+            </div>
+            <div class="charon-feature-pill">
+              <span class="pill-icon">⏳</span>
+              <span class="pill-title">Jeda Dramatis Normal</span>
+            </div>
+          </div>
+
+          <!-- Dramatic Pause Segmented Switcher Section -->
+          <div class="pause-control-section">
+            <div class="pause-control-header">
+              <span class="control-label">Intensitas Jeda Dramatis</span>
+              <button type="button" class="info-help-btn" id="btnHelpJeda" title="Penjelasan intensitas jeda dramatis">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- 3-Segmented Pill Switcher -->
+            <div class="segmented-pill-container" role="radiogroup" aria-label="Intensitas Jeda Dramatis">
+              <button type="button" class="segment-btn" data-pause="subtle" role="radio" aria-checked="false">
+                Halus
+              </button>
+              <button type="button" class="segment-btn active" data-pause="normal" role="radio" aria-checked="true">
+                Normal
+              </button>
+              <button type="button" class="segment-btn" data-pause="high" role="radio" aria-checked="false">
+                Intens & Panjang
+              </button>
+            </div>
+            <input type="hidden" id="dramaticPauseInput" value="normal">
+
+            <p class="pause-helper-caption" id="pauseHelperCaption">
+              Jeda alami pada tanda baca (... , ., dan .). Cocok untuk narasi dokumenter.
+            </p>
+          </div>
+
+          <!-- Reference Voice Box (gunung_padang_1791693456211.wav) -->
+          <div class="reference-voice-box">
+            <div class="reference-voice-header">
+              <span class="ref-icon">🎯</span>
+              <div class="ref-meta">
+                <span class="ref-title">Suara Acuan Baku Studio</span>
+                <span class="ref-badge">WAV 24kHz Mono</span>
+              </div>
+            </div>
+            <div class="ref-file-display">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ref-file-icon">
+                <path d="M9 18V5l12-2v13"/>
+                <circle cx="6" cy="18" r="3"/>
+                <circle cx="18" cy="16" r="3"/>
+              </svg>
+              <span class="ref-filename">gunung_padang_1791693456211.wav</span>
+            </div>
+            <p class="ref-desc">Studio ini dikalibrasi 100% persis ke karakter vokal file acuan ini (Google Generative AI Charon).</p>
+            <button type="button" class="btn-play-ref" id="btnPlayReferenceAudio">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="6 4 20 12 6 20 6 4"></polygon>
+              </svg>
+              <span>Putar Audio Acuan</span>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Bottom Card: Hasil Audio Player Studio -->
+      <section class="results-column" aria-label="Hasil Pemutar Audio">
+        <div class="studio-card audio-player-card">
+          <!-- Top Row -->
+          <div class="card-top-row">
+            <div class="card-heading-group">
+              <div class="icon-badge icon-badge-gold">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18V5l12-2v13"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <circle cx="18" cy="16" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="card-main-title">Hasil Audio</h3>
+                <p class="card-sub-title">Dengarkan hasil narasi Anda dan unduh dalam format audio.</p>
+              </div>
+            </div>
+
+            <button type="button" class="btn-history-toggle" id="btnOpenHistory">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Riwayat Audio</span>
+            </button>
+          </div>
+
+          <!-- Studio Player Bar (Clean Rounded Capsule) -->
+          <div class="player-capsule-bar">
+            <!-- Big Round Play/Pause Button -->
+            <button type="button" class="capsule-play-btn" id="btnPlayPause" disabled title="Putar / Jeda Narasi">
+              <svg id="playIconSvg" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="6 4 20 12 6 20 6 4"></polygon>
+              </svg>
+              <svg id="pauseIconSvg" class="hidden" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+            </button>
+
+            <!-- Current Time -->
+            <span class="time-readout" id="currentTimeDisplay">0:00</span>
+
+            <!-- Interactive Waveform Scrubber Canvas -->
+            <div class="waveform-scrubber-area" id="waveformScrubberArea" title="Klik atau seret untuk memajukan audio">
+              <canvas id="waveformCanvas" width="600" height="38"></canvas>
+              <div class="waveform-hover-guide" id="waveformHoverGuide"></div>
+            </div>
+
+            <!-- Duration Time -->
+            <span class="time-readout" id="totalDurationDisplay">0:00</span>
+
+            <!-- Volume Control -->
+            <div class="player-volume-group">
+              <button type="button" class="btn-vol-icon" id="btnMuteToggle" title="Volume">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                </svg>
+              </button>
+              <input type="range" id="playerVolumeSlider" min="0" max="100" value="100" class="mini-volume-range">
+            </div>
+
+            <!-- 3 Dots Options Button -->
+            <div class="player-more-options">
+              <button type="button" class="btn-dots-menu" id="btnDotsMenu" title="Pilihan Kecepatan">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="12" cy="5" r="1.8"/>
+                  <circle cx="12" cy="12" r="1.8"/>
+                  <circle cx="12" cy="19" r="1.8"/>
+                </svg>
+              </button>
+              <div class="speed-popup-menu hidden" id="speedPopupMenu">
+                <button type="button" class="speed-opt-btn active" data-speed="1.0">1.0x (Normal)</button>
+                <button type="button" class="speed-opt-btn" data-speed="1.25">1.25x</button>
+                <button type="button" class="speed-opt-btn" data-speed="1.5">1.5x</button>
+                <button type="button" class="speed-opt-btn" data-speed="0.85">0.85x (Lambat)</button>
+              </div>
+            </div>
+
+            <!-- Download Audio Button -->
+            <a id="btnDownloadAudio" href="#" class="btn-download-capsule disabled" download="Chronicle_Charon_Narration.wav">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span id="btnDownloadAudioText">Unduh Audio (.wav)</span>
+            </a>
+          </div>
+
+          <!-- Bulk Results Container (Muncul saat generate > 1 suara) -->
+          <div id="bulkResultsSection" class="bulk-results-section hidden">
+            <div class="bulk-section-header">
+              <div class="bulk-header-info">
+                <div class="bulk-header-badge">📦 BULK STUDIO</div>
+                <h4 class="bulk-title" id="bulkResultsTitle">Hasil Suara Bulk</h4>
+                <p class="bulk-subtitle" id="bulkResultsSubtitle">Semua suara terpisah dapat diputar dan diunduh di bawah ini.</p>
+              </div>
+              <a id="btnDownloadBulkZip" href="#" class="btn-download-bulk-zip" download="Chronicle_Voices_Bulk.zip" title="Unduh semua file suara sekaligus dalam format ZIP">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="zip-icon-svg">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>Unduh Semua (Bulk ZIP)</span>
+              </a>
+            </div>
+
+            <!-- List Grid Voice 1 s/d Voice N -->
+            <div class="bulk-voice-list" id="bulkVoiceList">
+              <!-- Item suara dirender dinamis -->
+            </div>
+          </div>
+
+          <!-- Hidden Native Audio Element -->
+          <audio id="audioElement" preload="metadata"></audio>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- =========================================================================
+       MODALS & DRAWERS
+       ========================================================================= -->
+
+  <!-- 1. Contoh Naskah Modal -->
+  <div class="modal-backdrop hidden" id="modalContohNaskah">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-icon">📜</span>
+          <h4>Koleksi Contoh Naskah Dokumenter & Misteri</h4>
+        </div>
+        <button type="button" class="btn-close-modal" data-close-modal="modalContohNaskah">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="script-preset-list">
+          <div class="script-preset-item" data-preset="peradaban">
+            <div class="preset-badge">🏛️ Dokumenter Sejarah</div>
+            <h5>Runtuhan Megah Acropolis</h5>
+            <p>Di balik runtuhan marmer yang kini sunyi... pernah berdiri sebuah peradaban megah yang menggetarkan dunia kuno. Angin pegunungan berhembus perlahan di antara pilar-pilar yang retak... membawa bisikan rahasia masa lalu yang terkubur selama ribuan tahun.</p>
+          </div>
+
+          <div class="script-preset-item" data-preset="alexandria">
+            <div class="preset-badge">📜 Misteri Sejarah</div>
+            <h5>Rahasia Perpustakaan Alexandria</h5>
+            <p>Ratusan ribu gulungan pengetahuan lenyap dalam semalam... Api menjalar cepat melahap rahasia para filsuf dan astronom kuno. Apakah seluruh ilmu itu benar-benar musnah, ataukah sebagian tersimpan di ruang bawah tanah yang tak pernah ditemukan?</p>
+          </div>
+
+          <div class="script-preset-item" data-preset="charon">
+            <div class="preset-badge">🌘 Mitologi & Monolog</div>
+            <h5>Panggilan Sang Penyeberang (Charon)</h5>
+            <p>Malam telah larut ketika kabut tebal perlahan turun menyelimuti dermaga tua itu. Tak ada suara, selain derit kayu lapuk dan bisikan arus air dingin. Sesuatu yang tak kasat mata... sedang menunggumu di seberang sana.</p>
+          </div>
+
+          <div class="script-preset-item" data-preset="ekspedisi">
+            <div class="preset-badge">🧭 Ekspedisi Arkeologi</div>
+            <h5>Pintu Gerbang Kuil Terlarang</h5>
+            <p>Tepat ketika matahari terbenam di balik bukit batu, pintu batu raksasa itu akhirnya bergeser dengan suara gemuruh berat. Debu purba mengepul ke udara... dan untuk pertama kalinya setelah tiga ribu tahun, cahaya menyinari lorong makam raja yang terlupakan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Panduan Studio Modal -->
+  <div class="modal-backdrop hidden" id="modalPanduan">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-icon">📖</span>
+          <h4>Panduan Narasi Sinematik Charon</h4>
+        </div>
+        <button type="button" class="btn-close-modal" data-close-modal="modalPanduan">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="guide-content">
+          <div class="guide-step">
+            <span class="step-num">1</span>
+            <div>
+              <h6>Karakter Vokal Charon</h6>
+              <p>Charon adalah vokal narator pria berwibawa dengan resonansi mendalam. Sangat ideal untuk video dokumenter, kisah sejarah, misteri, misteri arkeologi, dan dongeng mitologi.</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <span class="step-num">2</span>
+            <div>
+              <h6>Teknik Jeda Dramatis (...)</h6>
+              <p>Gunakan tanda titik tiga (<code>...</code>) di naskah Anda untuk menciptakan hening dramatis sebelum poin krusial diucapkan. Gunakan koma (<code>,</code>) secara teratur untuk nafas bicara yang alami.</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <span class="step-num">3</span>
+            <div>
+              <h6>Pilihan Intensitas Jeda</h6>
+              <p>Pilih <strong>Halus</strong> untuk pembacaan berita santai, <strong>Normal</strong> untuk narasi dokumenter standar, atau <strong>Intens & Panjang</strong> untuk adegan horor dan ketegangan tinggi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Tips Jeda Dramatis Popover Modal -->
+  <div class="modal-backdrop hidden" id="modalTipsJeda">
+    <div class="modal-card modal-card-sm">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-icon">💡</span>
+          <h4>Tips Mengoptimalkan Jeda Dramatis</h4>
+        </div>
+        <button type="button" class="btn-close-modal" data-close-modal="modalTipsJeda">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ul class="tips-bullet-list">
+          <li><strong>Elipsis (<code>...</code>):</strong> Memberi jeda napas sekitar 0.5 detik yang membuat pendengar menanti kelanjutan kalimat.</li>
+          <li><strong>Tanda Koma (<code>,</code>):</strong> Memberi jeda ritmis pendek ~0.2 detik agar suara tidak terburu-buru.</li>
+          <li><strong>Titik (<code>.</code>):</strong> Menandai jeda penuh antar paragraf untuk artikulasi berwibawa.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Settings ⚙️ Modal (Dual Engine & Fine Tuning) -->
+  <div class="modal-backdrop hidden" id="modalSettings">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-icon">⚙️</span>
+          <h4>Pengaturan Audio & Mesin Suara</h4>
+        </div>
+        <button type="button" class="btn-close-modal" data-close-modal="modalSettings">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Engine Selector -->
+        <div class="settings-group">
+          <label class="settings-label">Pilihan Mesin Narasi:</label>
+          <div class="engine-badge-status">
+            <span class="engine-active-dot"></span>
+            <span id="engineActiveLabel">Google Gemini TTS (Charon Native — Persis Acuan Baku)</span>
+          </div>
+        </div>
+
+        <!-- Google Gemini API Key Input -->
+        <div class="settings-group">
+          <label class="settings-label" for="settingsGeminiKey">Google Gemini API Key:</label>
+          <div class="settings-input-row">
+            <input type="password" id="settingsGeminiKey" class="settings-text-input" placeholder="Masukkan API Key Gemini Anda (kosongkan untuk pakai default bawaan)">
+            <button type="button" class="btn-save-key" id="btnSaveKeyInModal">Simpan</button>
+          </div>
+          <small class="settings-help">Jika Anda memiliki API Key sendiri (dari Google AI Studio), masukkan di sini untuk kuota penuh akun Anda. Jika dikosongkan, studio otomatis memakai API Key bawaan sistem.</small>
+        </div>
+
+        <!-- Fine Tuning Sliders -->
+        <div class="settings-group">
+          <div class="tuning-slider-row">
+            <div class="slider-info-row">
+              <span>Kecepatan Bicara (Speed):</span>
+              <strong id="modalRateDisplay">Normal (1.0x)</strong>
+            </div>
+            <input type="range" id="modalSliderRate" min="-40" max="40" value="0" step="5" class="custom-slider">
+          </div>
+
+          <div class="tuning-slider-row">
+            <div class="slider-info-row">
+              <span>Tinggi Nada Vokal (Pitch):</span>
+              <strong id="modalPitchDisplay">0 Hz (Normal Sinematik)</strong>
+            </div>
+            <input type="range" id="modalSliderPitch" min="-20" max="20" value="0" step="2" class="custom-slider">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Riwayat Audio Modal -->
+  <div class="modal-backdrop hidden" id="modalRiwayat">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-icon">🕒</span>
+          <h4>Riwayat Narasi Charon (<span id="historyCountBadge">0</span>)</h4>
+        </div>
+        <button type="button" class="btn-close-modal" data-close-modal="modalRiwayat">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="history-list-box" id="historyListBox">
+          <div class="empty-history-notice" id="emptyHistoryNotice">
+            <span>🌘</span>
+            <p>Belum ada riwayat narasi audio yang tersimpan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
